@@ -39,12 +39,12 @@
     background-color: var(--dark-green);
     color: var(--yellow);
     height: 90%;
-    width: 40%;
+    width: 36%;
     font-family: "Poppins", system-ui;
     padding: 20px 40px;
     box-sizing: border-box;
     border-radius: 6px;
-    margin-right: 80px;
+    margin-right: 60px;
 
 }
 
