@@ -1,0 +1,199 @@
+@media screen {
+    
+}
+
+:root {
+    --page-grey: #E5E5E5;
+    --dark-green: #223D40;
+    --light-green: #29555A;
+    --yellow: #F2CF8D;
+    --button-white: #ECECEC;
+    --dark-yellow: #8C805D;
+    --light-yellow: #F2CF8D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    background-color: var(--dark-green);
+    /* background-color: var(--yellow); */
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+.hero {
+    max-width: 30%;
+    margin: auto;
+    /* border: 2px solid black; */
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    background-color: var(--yellow);
+    /* background-color: var(--dark-green); */
+    color: var(--dark-green);
+    /* color: var(--yellow); */
+    height: 90%;
+    width: 36%;
+    font-family: "Poppins", system-ui;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-right: 60px;
+    /* align-content: center; */
+    box-shadow: rgba(3, 3, 4, 0.692) 0px 7px 29px 0px;
+
+}
+
+.box .welcome {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.box .logo-name {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+.buttons {
+    /* background-color: red; */
+    height: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.button {
+    background-color: var(--button-white);
+    width: 95%;
+    height: 54px;
+    border-radius: 6px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-left: 5%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    /* height: 18px; */
+    width: 5%;
+    margin-right: 2%;
+}
+
+.user-icon {
+    margin-right: 2%;
+    width: 5%;
+}
+
+.labels{
+    width: 92%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.label{
+    font-size: 0.7em;
+    color: black;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid var(--dark-green);
+    line-height: 26px;
+    font-size: 16px;
+    /* font-weight: 550; */
+    background-color: transparent;
+    outline: none;
+}
+
+.input:focus,
+.input:active {
+    border-bottom: 2px solid red;
+}
+
+.remember-forgot{
+    width: 95%;
+    margin-left: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+a{
+    color: var(--dark-green);
+}
+/* this added after 1st comit */
+a:hover{
+    color: blue;
+    transition: color 400ms ease;
+}
+
+.signup{
+    height: 54px;
+    width: 30%;
+    border-radius: 6px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    background-color: var(--dark-green);
+    color: var(--yellow);
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 5%;
+    cursor: pointer;
+    box-shadow: -3px -3px 4px inset black;
+}
+
+.rem-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.signup:hover{
+    transform: scale(1.05);
+    /* background-color: var(--dark-yellow);
+    color: white; */
+    transition: background-color 600ms ease-in-out, color 600ms ease-in-out, transform 600ms ease-in-out;
+}
+
+.line-box img{
+    filter: invert(1);
+    max-width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.line-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5%;
+}
