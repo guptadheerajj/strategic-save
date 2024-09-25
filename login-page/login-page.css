@@ -14,6 +14,8 @@
 }
 
 .page {
+    background-color: var(--dark-green);
+    /* background-color: var(--yellow); */
     width: 100vw;
     height: 100vh;
 
@@ -36,8 +38,10 @@
 }
 
 .box {
-    background-color: var(--dark-green);
-    color: var(--yellow);
+    background-color: var(--yellow);
+    /* background-color: var(--dark-green); */
+    color: var(--dark-green);
+    /* color: var(--yellow); */
     height: 90%;
     width: 36%;
     font-family: "Poppins", system-ui;
@@ -45,6 +49,10 @@
     box-sizing: border-box;
     border-radius: 6px;
     margin-right: 60px;
+    /* align-content: center; */
+    /* box-shadow: rgba(3, 3, 4, 0.692) 0px 7px 29px 0px; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 40px 55px, rgba(0, 0, 0, 0.12) 0px -20px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 20px 13px, rgba(0, 0, 0, 0.09) 0px -10px 5px;
 
 }
 
@@ -95,7 +103,7 @@
 .labels{
     width: 92%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
 }
 
@@ -106,7 +114,7 @@
 
 .input {
     border: none;
-    border-bottom: 2px solid var(--light-green);
+    border-bottom: 2px solid var(--dark-green);
     line-height: 26px;
     font-size: 16px;
     /* font-weight: 550; */
@@ -123,13 +131,18 @@
     width: 95%;
     margin-left: 5%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     /* align-items: center; */
 }
 
 a{
-    color: var(--dark-yellow);
+    color: var(--dark-green);
+}
+/* this added after 1st comit */
+a:hover{
+    color: blue;
+    transition: color 400ms ease;
 }
 
 .login{
@@ -138,17 +151,18 @@ a{
     border-radius: 6px;
     padding: 0px 20px;
     box-sizing: border-box;
-    background-color: var(--yellow);
-    color: var(--dark-green);
+    background-color: var(--dark-green);
+    color: var(--yellow);
     font-size: 16px;
     font-weight: 700;
     margin-left: 5%;
     cursor: pointer;
+    box-shadow: -3px -3px 4px inset black;
 }
 
 .rem-box{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 4px;
@@ -156,12 +170,13 @@ a{
 
 .login:hover{
     transform: scale(1.05);
-    background-color: rgb(111, 148, 99);
-    color: white;
+    /* background-color: var(--dark-yellow);
+    color: white; */
     transition: background-color 600ms ease-in-out, color 600ms ease-in-out, transform 600ms ease-in-out;
 }
 
 .line-box img{
+    filter: invert(1);
     max-width: 40%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -169,7 +184,7 @@ a{
 
 .line-box{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
