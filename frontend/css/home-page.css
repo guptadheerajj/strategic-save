@@ -1,0 +1,226 @@
+:root {
+    --page-grey: #E5E5E5;
+    --dark-green: #223D40;
+    --light-green: #29555A;
+    --yellow: #F2CF8D;
+    --button-white: #ECECEC;
+    --dark-yellow: #8C805D;
+    --light-yellow: #F2CF8D;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--yellow);
+}
+
+header {
+    width: 100vw;
+    height: 30vh;
+}
+
+.title {
+    height: 30%;
+    padding: 10px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.logout {
+    height: 2.2rem;
+    padding: 0px 10px;
+    font-family: "Poppins", system-ui;
+
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: var(--dark-green);
+    color: var(--yellow);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.form {
+    /* background-color: white; */
+    height: 50%;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+label,
+select,
+.add {
+    font-size: 16px;
+    font-family: "Poppins", system-ui;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--dark-green);
+}
+
+select:active,
+select:focus {
+    border-bottom: 2px solid red;
+}
+
+.add {
+    height: 2.2rem;
+    padding: 0px 10px;
+    font-family: "Poppins", system-ui;
+
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: var(--dark-green);
+    color: var(--yellow);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.visualisation {
+    background-color: white;
+    border: 2px solid var(--dark-green);
+    height: 2em;
+    width: 4.2em;
+    padding: 5px;
+    border-radius: 6px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.vicon {
+    background-color: white;
+    width: 2em;
+    border-radius: 4px;
+}
+
+main {
+    max-width: 80vw;
+    margin: auto;
+}
+
+#expanses {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#expanses td,
+#expanses th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#expanses tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#expanses tr:nth-child(odd) {
+    background-color: #a09a9a;
+}
+
+#expanses tr:hover {
+    background-color: #ddd;
+}
+
+#expanses th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--dark-green);
+    color: var(--yellow);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeModal {
+    background-color: #ccc;
+}
+
+#closeModal:hover {
+    background-color: #bbb;
+}
+
+.add-expense-form{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 70vh;
+    overflow-y: scroll;
+
+}
