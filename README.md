@@ -12,3 +12,4 @@ Add New Transactions
 
 Visual Dashboard Preview
 ![Screenshot 2024-09-30 120522](https://github.com/user-attachments/assets/33bba94e-328c-4a67-a985-161ba5d11107)
+![Screenshot 2024-09-30 120529](https://github.com/user-attachments/assets/d5d0677b-99b5-4ced-85dd-d14e451d2a5c)
