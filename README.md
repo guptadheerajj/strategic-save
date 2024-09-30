@@ -11,6 +11,7 @@ Add New Transactions
 ![image](https://github.com/user-attachments/assets/03ed7599-9a6f-4039-a4c4-80943c7dab52)
 
 Visual Dashboard Preview
-![image](https://github.com/user-attachments/assets/855a536d-d008-42c5-b8da-62c5f96f3dce)
+![image](https://github.com/user-attachments/assets/9369e5a6-c3ba-4092-a8a7-f733c5a4769c)
 
-![image](https://github.com/user-attachments/assets/d7c4cc50-3f32-4952-b3cc-2095ac1f5eeb)
+![image](https://github.com/user-attachments/assets/deea826b-ea01-43c2-af18-f328364c7d4f)
+
