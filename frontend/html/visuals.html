@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuals</title>
+    <link rel="stylesheet" href="../css/visuals.css"> <!-- Link your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="head-title">Visual Dashboard</div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Expenses by Category</div>
+            <canvas id="categoryPieChart" class="chart-container"></canvas>
+        </div>
+        <div class="card">
+            <div class="card-header">Number of Transactions by Category</div>
+            <canvas id="transactionPieChart" class="chart-container"></canvas>
+        </div>
+
+        <!-- Replace <pre> with <div> for Credit by Category -->
+        <div class="card">
+            <div class="card-header">Credit by Category</div>
+            <div id="creditByCategory"></div> <!-- Updated to div for progress bars -->
+        </div>
+
+        <!-- Replace <pre> with <div> for Expense by Category -->
+        <div class="card">
+            <div class="card-header">Expense by Category</div>
+            <div id="expenseByCategory"></div> <!-- Updated to div for progress bars -->
+        </div>
+    </div>
+
+    <script src="../js/visuals.js"></script> <!-- Link to your visuals.js -->
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../css/register-page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <div class="hero">
+            <img src="../assets/hero.png" alt="background-iamge-here">
+        </div>
+        <div class="box">
+            <div class="welcome">Welcome to</div>
+            <div class="logo-name">Strategic Save</div>
+
+            <form action="" class="buttons">
+                <div class="uname button">
+                    <img src="../assets/username.png" alt="username-icon-here" class="icon user-icon">
+                    <div class="labels uname-label">
+                        <label for="username" class="label">Username</label>
+                        <input type="text" class="input" name="username" id="username" placeholder="Your username" required>
+                    </div>
+                </div>
+                <div class="email button">
+                    <img class="icon" src="../assets/email.png" alt="email-logo-here">
+                    <div class="email-label labels">
+                        <label class="label" for="email-address">Email</label>
+                        <input class="input" type="email" name="email-address" id="email-address"
+                            placeholder="example@gmail.com" required>
+                    </div>
+                </div>
+
+                <div class="pass button">
+                    <img class="icon" src="../assets/Password-Key.png" alt="key-here">
+                    <div class="pass-label labels">
+                        <label class="label" for="password">Password</label>
+                        <input class="input" type="password" name="password" id="password" required>
+                    </div>
+                    <img class="icon" src="../assets/Password-eye.png" alt="key-here">
+                </div>
+
+                <div class="remember-forgot">
+                    <div class="rem-box">
+                        <input type="checkbox" name="remember-me" id="remember-me" class="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a target="_blank" class="forgot" href="https://www.forgotpassword.com">Forgot Password?</a>
+                </div>
+
+                <button class="signup" type="submit">Sign up</button>
+
+                <div class="line-box">
+                    <img src="../assets/Line 1.png" alt="">
+                    OR
+                    <img src="../assets/Line 1.png" alt="">
+                </div>
+
+                <div class="register-box">
+                    Already have an account?
+                    <a class="register" href="login-page.html">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

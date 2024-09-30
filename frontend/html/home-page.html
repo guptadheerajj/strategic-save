@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/logo-no-background.png" alt="logo-here">
+            <button class="logout" onclick="window.location.href='../html/login-page.html'">Logout</button>
+        </div>
+
+        <div class="form">
+            <div class="frequency-box options">
+                <label for="frequency">Select frequency</label>
+                <select name="frequency" id="frequency">
+                    <option value="7">Last Week</option>
+                    <option value="30">Last Month</option>
+                    <option value="365">Last Year</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+
+            <div class="type-box options">
+                <label for="type">Type</label>
+                <select name="Type" id="type">
+                    <option value="all">All</option>
+                    <option value="expense">Expense</option>
+                    <option value="earned">Earned</option>
+                </select>
+            </div>
+
+            <button class="visuals-button" onclick="window.location.href='visuals.html'">Visuals</button>
+
+            <button class="add" id="addTransactionBtn">Add new</button>
+        </div>
+    </header>
+
+    <main>
+        <table id="expanses">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="transactionTableBody">
+                <!-- Transactions will be appended here -->
+            </tbody>
+        </table>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Transaction Details</h2>
+            <form class="add-expense-form" id="addTransactionForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter Transaction Name" required>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter your Amount" required>
+
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Choose...</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Tip">Tip</option>
+                    <option value="Food">Food</option>
+                    <option value="Medical">Medical</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" placeholder="Enter Description">
+
+                <label for="transactionType">Transaction Type</label>
+                <select id="transactionType" name="transactionType" required>
+                    <option value="">Choose...</option>
+                    <option value="credit">Credit</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <div class="modal-buttons">
+                    <button type="button" id="closeModal">Close</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/home-page.js"></script>
+</body>
+
+</html>
