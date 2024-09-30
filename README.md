@@ -1,11 +1,14 @@
 Registration page preview
-![register](https://github.com/user-attachments/assets/cb7b2e58-5969-489f-935e-5ee3245a75ba)
+![image](https://github.com/user-attachments/assets/aefeb40c-d729-44ca-b716-6c3f06e4767f)
 
 Login page preview
-![login](https://github.com/user-attachments/assets/0caa3d27-0049-455a-a983-5244546abbd6)
+![image](https://github.com/user-attachments/assets/22e1c01a-65e8-4ee8-9d09-839b140bffd8)
 
 Home page preview
-![Screenshot 2024-09-30 110245](https://github.com/user-attachments/assets/18b262c0-7cfa-496b-9a68-3dcecb63f9c6)
+![image](https://github.com/user-attachments/assets/afe58ff1-6229-424c-8e35-9951e1bcfa7e)
+
+Add New Transactions
+![image](https://github.com/user-attachments/assets/03ed7599-9a6f-4039-a4c4-80943c7dab52)
 
 Visual Dashboard Preview
-![Screenshot 2024-09-30 120522](https://github.com/user-attachments/assets/a5fe275e-25a4-401c-a775-81d32b9506b8)
+![127 0 0 1_3001_frontend_html_visuals html](https://github.com/user-attachments/assets/32f6aca3-4a47-43a8-b7e9-2397fe1ef1cb)
