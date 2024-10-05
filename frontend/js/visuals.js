@@ -1,103 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const userId = localStorage.getItem('userId'); // Retrieve user ID from local storage
-//     if (userId) {
-//         fetchTransactions(userId); // Fetch transactions to build charts
-//     } else {
-//         console.error('User ID not found in local storage.');
-//         alert('Please log in to view your visuals.');
-//     }
-
-//     function fetchTransactions(userId) {
-//         fetch(`http://localhost:3000/api/transactions?userId=${userId}`)
-//             .then(response => response.json())
-//             .then(data => {
-//                 if (data.success) {
-//                     const transactions = data.transactions;
-//                     createCategoryPieChart(transactions);
-//                     createCreditByCategory(transactions);
-//                     createExpenseByCategory(transactions);
-//                     createTransactionPieChart(transactions);
-//                 } else {
-//                     console.error('Failed to load transactions: ' + data.message);
-//                 }
-//             })
-//             .catch(error => console.error('Error fetching transactions:', error));
-//     }
-
-//     function createCategoryPieChart(transactions) {
-//         // Group transactions by category for the pie chart
-//         const categoryData = {};
-//         transactions.forEach(transaction => {
-//             const category = transaction.category;
-//             categoryData[category] = (categoryData[category] || 0) + parseFloat(transaction.amount);
-//         });
-
-//         const ctx = document.getElementById('categoryPieChart').getContext('2d');
-//         if (Object.keys(categoryData).length > 0) {
-//             new Chart(ctx, {
-//                 type: 'pie',
-//                 data: {
-//                     labels: Object.keys(categoryData),
-//                     datasets: [{
-//                         label: 'Expenses by Category',
-//                         data: Object.values(categoryData),
-//                         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
-//                     }]
-//                 }
-//             });
-//         } else {
-//             console.warn('No data available for category pie chart.');
-//         }
-//     }
-
-//     function createCreditByCategory(transactions) {
-//         const creditData = {};
-//         transactions.forEach(transaction => {
-//             if (transaction.transaction_type === 'credit') {
-//                 const category = transaction.category;
-//                 creditData[category] = (creditData[category] || 0) + parseFloat(transaction.amount);
-//             }
-//         });
-//         document.getElementById('creditByCategory').innerHTML = JSON.stringify(creditData, null, 2) || 'No credits available.';
-//     }
-
-//     function createExpenseByCategory(transactions) {
-//         const expenseData = {};
-//         transactions.forEach(transaction => {
-//             if (transaction.transaction_type === 'expense') {
-//                 const category = transaction.category;
-//                 expenseData[category] = (expenseData[category] || 0) + parseFloat(transaction.amount);
-//             }
-//         });
-//         document.getElementById('expenseByCategory').innerHTML = JSON.stringify(expenseData, null, 2) || 'No expenses available.';
-//     }
-
-//     function createTransactionPieChart(transactions) {
-//         const transactionCountData = {};
-//         transactions.forEach(transaction => {
-//             const category = transaction.category;
-//             transactionCountData[category] = (transactionCountData[category] || 0) + 1;
-//         });
-
-//         const ctx = document.getElementById('transactionPieChart').getContext('2d');
-//         if (Object.keys(transactionCountData).length > 0) {
-//             new Chart(ctx, {
-//                 type: 'pie',
-//                 data: {
-//                     labels: Object.keys(transactionCountData),
-//                     datasets: [{
-//                         label: 'Number of Transactions by Category',
-//                         data: Object.values(transactionCountData),
-//                         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
-//                     }]
-//                 }
-//             });
-//         } else {
-//             console.warn('No data available for transaction pie chart.');
-//         }
-//     }
-// });
-// percent line 
 document.addEventListener('DOMContentLoaded', function () {
     const userId = localStorage.getItem('userId'); // Retrieve user ID from local storage
     if (userId) {
@@ -125,13 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function createCategoryPieChart(transactions) {
-        // Group transactions by category for the pie chart
+        // Group transactions by category for the pie chart, excluding 'credit' transactions
         const categoryData = {};
         transactions.forEach(transaction => {
-            const category = transaction.category;
-            categoryData[category] = (categoryData[category] || 0) + parseFloat(transaction.amount);
+            if (transaction.transaction_type !== 'credit') {  // Exclude credit transactions
+                const category = transaction.category;
+                categoryData[category] = (categoryData[category] || 0) + parseFloat(transaction.amount);
+            }
         });
-
+    
         const ctx = document.getElementById('categoryPieChart').getContext('2d');
         if (Object.keys(categoryData).length > 0) {
             new Chart(ctx, {
@@ -141,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     datasets: [{
                         label: 'Expenses by Category',
                         data: Object.values(categoryData),
-                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', 'pink', 'red', 'brown', 'blue'],
                     }]
                 }
             });
@@ -149,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.warn('No data available for category pie chart.');
         }
     }
+    
 
     // Updated createCreditByCategory function
     function createCreditByCategory(transactions) {
@@ -232,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     datasets: [{
                         label: 'Number of Transactions by Category',
                         data: Object.values(transactionCountData),
-                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', 'pink', 'red', 'brown', 'blue'],
                     }]
                 }
             });
